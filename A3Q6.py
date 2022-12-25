@@ -1,0 +1,52 @@
+student_info=dict()
+n="y"
+alistsid=[]
+print("----------------(a)-------------------")
+while(n=="y"):
+    sid=int(input("Give the sid (a number):"))
+    name=input("Enter your name:")
+    student_info[sid]=name
+    n=input("give a letter y or n:")
+    alistsid.append((sid,name))
+print("The required dictionary--",student_info)
+print("The list will be used in further parts--")
+print("The required list--",alistsid)
+print("Done!")
+print("----------------(b)------------------------")
+print("The dictionary we had-")
+print(student_info)
+newdict=dict()
+alistname=[]
+for (k,v) in student_info.items():
+    newdict[v]=k
+    alistname.append((v,k))
+print("now we have exchanged the key value pair but its not sorted-")
+print(newdict)
+print("The unsorted list--")
+print(alistname)
+alistname.sort()
+print("The sorted list--")
+print(alistname)
+print("The sorted dictionary-")
+sorted_dict=dict(alistname)
+print(sorted_dict)
+required_dict_name=dict()
+for (k,v) in sorted_dict.items():
+    required_dict_name[v]=k
+print("This is the dictionary sorted on the basis of name-")
+print(required_dict_name)
+print("Done!")
+print("-----------------(c)-----------------")
+print("The list we made before will be used now-")
+print(alistsid)
+alistsid.sort()
+print("now the list is sorted-")
+print(alistsid)
+sorted_student_info_sid=dict(alistsid)
+print("sorted dictionary based on sid-",sorted_student_info_sid)
+print("Done!")
+print("-----------------(d)-----------------")
+entered_sid=int(input("Please enter one of the sids you entered before-"))
+print("The name of the student with the entered sid is-")
+print(student_info[entered_sid])
+print("Done!")
