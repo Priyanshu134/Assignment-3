@@ -1,4 +1,4 @@
-n=int(input("enter no. upto which you want to ge the series"))
+n=int(input("enter no. upto which you want to get the series"))
 n1=0
 n2=1
 sum=0
